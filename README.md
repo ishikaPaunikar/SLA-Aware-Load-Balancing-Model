@@ -1,140 +1,122 @@
-TITLE - Cloud Load Balancing Algorithms: Comparative Analysis
+Cloud Load Balancing Algorithms: Comparative Analysis
+Overview
 
-A simulation-based study comparing SLA-Aware, Round Robin, and Hybrid Adaptive load balancing algorithms in cloud computing using CloudSim.
+This project implements and compares three cloud load balancing algorithms for efficient resource management:
 
-Keywords - Cloud Computing, Load Balancing, SLA-Aware, Round Robin, Hybrid Adaptive, CloudSim
+SLA-Aware (SA) → Optimizes task scheduling based on SLA priority, load, and cost
+Round Robin (RR) → Ensures uniform distribution of tasks across virtual machines
+Hybrid Adaptive (HA) → Dynamically switches between SA and RR for balanced performance
 
+Unlike simple implementations, this system is designed using CloudSim 4.0, providing a realistic cloud simulation environment with heterogeneous virtual machines and dynamic workloads.
 
-1. Project Overview - This project presents a simulation-based comparative analysis of three cloud load balancing algorithms: SLA-Aware (SA), Round Robin (RR), and Hybrid Adaptive (HA). The study evaluates their performance in a heterogeneous cloud environment using multiple Quality of Service (QoS) metrics such as SLA compliance, response time, energy consumption, and cost efficiency.The simulation is implemented using CloudSim 4.0 to ensure a realistic representation of cloud infrastructure and workload behavior.
+The project evaluates how different load balancing strategies behave under real-world cloud conditions instead of treating all algorithms as identical.
 
+Core Insight (Important)
 
+This is not just a basic comparison of algorithms.
 
-2. Features
+SLA-Aware focuses on minimizing response time and improving cost efficiency
+Round Robin focuses on reducing SLA violations through equal distribution
+Hybrid Adaptive balances both by dynamically adjusting strategy
+
+Key differences arise due to:
+
+Different workload handling approaches
+Different decision-making strategies
+Dynamic vs static behavior
+Features
 Simulation of a real-world cloud environment
 Implementation of three load balancing algorithms
 Multi-metric performance evaluation
 Statistical validation using ANOVA
 Hybrid adaptive algorithm with dynamic switching
-
-
-3. Objectives
+Objectives
 Design and simulate a realistic cloud computing environment
 Implement and evaluate three load balancing algorithms
 Compare performance using multiple evaluation metrics
 Identify the most efficient algorithm for practical deployment
+System Architecture
 
+The system consists of the following components:
 
-4. System Architecture
 Request Generator – Generates dynamic workload requests
 SLA Classifier – Assigns priority levels to tasks
 Load Balancer – Implements SLA-Aware, Round Robin, and Hybrid Adaptive algorithms
 VM Pool – Executes tasks on virtual machines
 Monitoring System – Collects performance metrics
+Algorithms
+SLA-Aware
 
+A dynamic scheduling algorithm that assigns tasks based on SLA urgency, VM load, and execution cost using a weighted scoring mechanism.
 
-5. Algorithms Description
-5.1 SLA-Aware Algorithm
+Round Robin
 
-A dynamic scheduling algorithm that assigns tasks based on SLA urgency, virtual machine load, and execution cost using a weighted scoring mechanism.
+A simple and efficient algorithm that distributes tasks sequentially across virtual machines without considering system state.
 
-5.2 Round Robin Algorithm
+Hybrid Adaptive
 
-A static scheduling algorithm that distributes tasks sequentially across virtual machines, ensuring equal load distribution without considering task priority.
+An advanced algorithm that dynamically switches between SLA-Aware and Round Robin using Exponential Moving Average (EMA) of SLA violations.
 
-5.3 Hybrid Adaptive Algorithm
+Dataset
 
-An advanced algorithm that combines SLA-Aware and Round Robin strategies. It dynamically switches between them based on system conditions using an Exponential Moving Average (EMA) of SLA violations.
+The dataset is synthetically generated using CloudSim to simulate realistic cloud workloads.
 
+5000 task requests
+200 heterogeneous virtual machines
+Tri-modal workload distribution
+Three SLA tiers (Critical, Standard, Best Effort)
+10 simulation runs for accuracy
 
+Workload characteristics include:
 
-6. Dataset Description
-
-Simulation duration is 3600 seconds representing one hour of cloud operation
-A total of 5000 task requests are generated
-The system consists of 200 heterogeneous virtual machines
-Workload follows a tri-modal distribution pattern
-Each algorithm is tested over 10 independent simulation runs for accuracy
-
-Task Distribution
-Tier-1 (Critical) represents 25 percent of tasks with deadline less than or equal to 200 milliseconds
-Tier-2 (Standard) represents 55 percent of tasks with deadline less than or equal to 500 milliseconds
-Tier-3 (Best Effort) represents 20 percent of tasks with no strict deadline
-
-Workload Model
-Non-homogeneous Poisson process is used
-Sinusoidal arrival pattern is followed
-Inspired by real-world cloud workload traces
-
-Virtual Machine Configuration
-50 high-performance machines with 8 vCPU and 32 GB RAM
-80 general-purpose machines with 4 vCPU and 16 GB RAM
-50 compute-optimized machines with 2 vCPU and 8 GB RAM
-20 memory-optimized machines with 16 vCPU and 64 GB RAM
-
-
-7. Performance Metrics
+Non-homogeneous Poisson distribution
+Sinusoidal arrival pattern
+Real-world inspired cloud behavior
+Performance Metrics
 SLA violation rate
-Average response time
-Virtual machine utilization
-Task throughput
+Response time
+VM utilization
+Throughput
 Energy consumption
 Cost efficiency
 Load variance
 Fault recovery rate
+Results Summary
+SLA-Aware achieves better response time and cost efficiency
+Round Robin achieves better SLA compliance
+Hybrid Adaptive provides the best overall balanced performance
+Key Findings
+Round Robin minimizes SLA violations
+SLA-Aware optimizes cost and energy
+Hybrid Adaptive achieves the best trade-off between performance and efficiency
+Statistical Analysis
 
+All results are validated using ANOVA testing.
 
-8. Results Summary
-SLA-Aware algorithm provides low response time and better energy efficiency
-Round Robin achieves high SLA compliance but results in higher response time and energy usage
-Hybrid Adaptive algorithm provides balanced performance across all metrics and performs best overall
-
-
-9. Key Findings
-Round Robin performs best in terms of SLA compliance due to equal load distribution
-SLA-Aware performs best in terms of cost and energy efficiency
-Hybrid Adaptive provides the best overall performance by balancing efficiency and SLA requirements
-
-
-10. Statistical Analysis
-One-way ANOVA test is applied on all performance metrics
-The p-value is less than 0.001, indicating statistically significant differences
-This confirms that the results are reliable and not due to random variation
-
-
-11. Future Work
-Integration with machine learning techniques for predictive scheduling
-Implementation of auto-scaling cloud environments
-Extension to multi-cloud deployment scenarios
-Use of real-time workload data for validation
-
-
-12. Project Structure
-src/ Source code
-dataset/ Generated dataset
-results/ Output logs and analysis
-docs/ Research paper
-README.md Documentation
-
-
-13. How to Run
+p-value < 0.001
+Results are statistically significant
+Confirms reliability of performance comparison
+Future Work
+Integration with machine learning techniques
+Auto-scaling cloud environments
+Multi-cloud deployment
+Real-time workload prediction
+Project Structure
+src/ – Source code
+dataset/ – Generated dataset
+results/ – Output logs and analysis
+docs/ – Research paper
+README.md – Documentation
+How to Run
 Install CloudSim 4.0
-Import the project into a Java IDE such as Eclipse or IntelliJ
-Run the simulation classes
-Analyze the generated output logs
-
-
-14. References
-CloudSim Toolkit Documentation
-Google Cluster Trace Dataset
-Research papers on cloud load balancing
-
-
-15. Author
+Import the project into Eclipse or IntelliJ
+Run simulation classes
+Analyze output logs
+Author
 
 Ishika Paunikar
 B.Tech – Symbiosis Institute of Technology
 
-
-16. Acknowledgment
+Acknowledgment
 
 This project was developed as part of coursework in Cloud Computing Tools and Techniques.
