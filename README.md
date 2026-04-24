@@ -1,6 +1,6 @@
 
 
-Cloud Load Balancing in Cloud Computing SLA-Aware, Round Robin and Hybrid Adaptive Algorithms
+TITLE - Cloud Load Balancing in Cloud Computing SLA-Aware, Round Robin and Hybrid Adaptive Algorithms
 
 
 
@@ -10,7 +10,7 @@ B.Tech, Symbiosis Institute of Technology, Nagpur
 
 
 
-Project Overview
+1 : Project Overview
 
 This project presents a simulation-based analysis of three load balancing algorithms used in cloud computing:
 
@@ -22,7 +22,7 @@ The objective is to evaluate and compare these algorithms based on key performan
 
 
 
-Problem Statement
+2 : Problem Statement
 
 In cloud environments, improper load distribution can lead to:
 
@@ -36,7 +36,7 @@ This project addresses these challenges by analyzing different load balancing st
 
 
 
-Methodology
+3 : Methodology
 
 The system is implemented using CloudSim 4.0 and follows a structured simulation pipeline:
 
@@ -51,7 +51,7 @@ The dataset is synthetically generated using simulation.
 
 
 
-Simulation Parameters
+4 : Simulation Parameters
 Total Tasks: 5000
 Virtual Machines: 200
 Simulation Time: 3600 seconds
@@ -72,7 +72,7 @@ TaskID,VMID,Tier,CPU_Util,ResponseTime,SLA_Status,Cost,Energy
 
 
 
-Mathematical Model
+5 : Mathematical Model
 
 Priority Score Function
 Score(t,v)=w1​SLA(t)+w2​Load(v)+w3​Cost(v)
@@ -89,7 +89,7 @@ P(u)=Pidle​+(Pmax​−Pidle​)u
 
 
 
-Algorithms
+6 : Algorithms
 
 
 SLA-Aware
@@ -109,7 +109,7 @@ Combines SLA-Aware and Round Robin
 Switches dynamically based on system conditions
 Provides balanced performance
 
-Result Summary
+7 : Result Summary
 
 
 | Metric         | SLA-Aware | Round Robin | Hybrid Adaptive |
@@ -124,7 +124,7 @@ Result Summary
 
 
 
-Key Findings
+8 : Key Findings
 
 Round Robin achieves the lowest SLA violation rate
 SLA-Aware performs better in terms of energy and cost
@@ -132,7 +132,7 @@ Hybrid Adaptive provides the best overall balance
 
 
 
-Statistical Analysis
+9 : Statistical Analysis
 ANOVA test confirms significant differences (p < 0.001)
 Algorithm choice has a strong impact on system performance
 Project Structure
@@ -154,14 +154,14 @@ Cloud-LoadBalancer/
 
 
 
-How to Run
+10 : How to Run
 
 javac Main.java
 java Main
 
 
 
-Limitations
+11 : Limitations
 
 Simulation-based results
 No real cloud deployment
@@ -170,7 +170,7 @@ Synthetic dataset
 
 
 
-Future Work
+12 : Future Work
 
 Integration with real cloud platforms
 AI-based load balancing
@@ -178,7 +178,16 @@ Auto-scaling mechanisms
 Machine learning for workload prediction
 
 
-Conclusion
+
+
+13 : Conclusion
 
 The study shows that no single algorithm is optimal in all scenarios.
 Hybrid Adaptive load balancing provides the best trade-off between performance, efficiency, and SLA compliance, making it suitable for real-world cloud environments.
+
+
+
+
+14 : Acknowledgement
+
+I would like to express my sincere gratitude to Dr. Bhupesh Kumar Dewangan for his guidance and support throughout this project. I also thank Symbiosis Institute of Technology, Nagpur, along with my family and friends, for their encouragement and assistance.
