@@ -2,17 +2,10 @@ TITLE - Cloud Load Balancing Algorithms: Comparative Analysis
 
 A simulation-based study comparing SLA-Aware, Round Robin, and Hybrid Adaptive load balancing algorithms in cloud computing using CloudSim.
 
-Keywords
-
-Cloud Computing, Load Balancing, SLA-Aware, Round Robin, Hybrid Adaptive, CloudSim
+Keywords - Cloud Computing, Load Balancing, SLA-Aware, Round Robin, Hybrid Adaptive, CloudSim
 
 
-
-1. Project Overview
-
-This project presents a simulation-based comparative analysis of three cloud load balancing algorithms: SLA-Aware (SA), Round Robin (RR), and Hybrid Adaptive (HA). The study evaluates their performance in a heterogeneous cloud environment using multiple Quality of Service (QoS) metrics such as SLA compliance, response time, energy consumption, and cost efficiency.
-
-The simulation is implemented using CloudSim 4.0 to ensure a realistic representation of cloud infrastructure and workload behavior.
+1. Project Overview - This project presents a simulation-based comparative analysis of three cloud load balancing algorithms: SLA-Aware (SA), Round Robin (RR), and Hybrid Adaptive (HA). The study evaluates their performance in a heterogeneous cloud environment using multiple Quality of Service (QoS) metrics such as SLA compliance, response time, energy consumption, and cost efficiency.The simulation is implemented using CloudSim 4.0 to ensure a realistic representation of cloud infrastructure and workload behavior.
 
 
 
